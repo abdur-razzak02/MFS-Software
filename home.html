@@ -1,75 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- fontawesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <main>
 
         <section class="flex justify-center mt-10">
             <!-- mobile mockup -->
             <div class="mockup-phone">
-              <div class="camera"></div>
-              <div class="display">
-                <div class="artboard artboard-demo phone-2 items-start justify-start pt-10 bg-gray-50">
+                <div class="camera"></div>
+                <div class="display">
+                    <div class="artboard artboard-demo phone-2 items-start justify-start pt-10 bg-gray-50">
 
-<!-- balance container -->
-<div class="flex items-center justify-between w-full px-3">
-    <!-- balance ammount -->
-    <div class="flex items-center gap-3">
-        <img src="./images/Taka.svg" class="w-8 h-7" alt="taka icon">
-            <div class="stat p-0">
-              <div class="stat-value"> 9400</div>
-              <div class="stat-desc"> Available Balance</div>
-            </div>
-    </div>
-    <!-- logOut button -->
-    <div class="flex items-center justify-center gap-3 py-1 px-3 border rounded-lg border-gray-300 cursor-pointer">
-        <h1>Log Out</h1>
-        <i class="fa-solid fa-right-from-bracket text-xl"></i>
-    </div>
+                        <!-- balance container -->
+                        <div class="flex items-center justify-between w-full px-3">
+                            <!-- balance ammount -->
+                            <div class="flex items-center gap-3">
+                                <img src="./images/Taka.svg" class="w-8 h-7" alt="taka icon">
+                                <div class="stat p-0">
+<div id="balance" class="stat-value"> 9400</div>
+<div class="stat-desc"> Available Balance</div>
+                                </div>
+                            </div>
+                            <!-- logOut button -->
+                            <div
+                                class="flex items-center justify-center gap-3 py-1 px-3 border rounded-lg border-gray-300 cursor-pointer">
+                                <h1>Log Out</h1>
+                                <i class="fa-solid fa-right-from-bracket text-xl"></i>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="px-3 mb-10">
+                            <h1 class="font-semibold text-xl">🔥 Welcome to Takai Taka!</h1>
+                            <p class="text-gray-400">Enjoy easy and convenient financial services with us. Cashout
+                                charge is low and </p>
+                        </div>
+                        <div class="flex items-center justify-center gap-5 w-full">
+                            <button id="addMoney"
+                                class="flex flex-col items-center justify-center p-2 border border-black rounded-lg gap-2 w-28 h-24 hover:bg-orange-100">
+                                <img src="./images/wallet.png" class="w-14 h-10" alt="Add Money">Add Money</button>
+                            <button id="cashOut"
+                                class="flex flex-col items-center justify-center p-2 border border-black rounded-lg gap-2 w-28 h-24 hover:bg-orange-100">
+                                <img src="./images/cash-out.png" class="w-14 h-12" alt="Cash Out">Cash Out</button>
+                        </div>
+
+                        <!-- Add Money form -->
+<div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-xl">
+<form class="card-body">
+<div class="form-control">
+<label class="label">
+<span class="label-text">Ammount</span>
+</label>
+<input id="ammountInput" type="text" placeholder="Enter Your Ammount"
+class="input input-bordered" required autocomplete="off" />
 </div>
-<div class="divider"></div>
-<div class="px-3 mb-10">
-    <h1 class="font-semibold text-xl">🔥 Welcome to Takai Taka!</h1>
-    <p class="text-gray-400">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+<div class="form-control">
+<label class="label">
+<span class="label-text">Pin</span>
+</label>
+<input id="pinInput" type="password" placeholder="Pin Number"
+class="input input-bordered" required autocomplete="on" />
 </div>
-<div class="flex items-center justify-center gap-5 w-full">
-    <button id="addMoney" class="flex flex-col items-center justify-center p-2 border border-black rounded-lg gap-2 w-28 h-24 hover:bg-orange-100"> <img src="./images/wallet.png" class="w-14 h-10" alt="Add Money">Add Money</button>
-    <button id="cashOut" class="flex flex-col items-center justify-center p-2 border border-black rounded-lg gap-2 w-28 h-24 hover:bg-orange-100"> <img src="./images/cash-out.png" class="w-14 h-12" alt="Cash Out">Cash Out</button>
-</div>
-
-
-
-
-
-
-
-                    
+<div class="form-control mt-6">
+<button id="addMoneyBtn" class="btn btn-primary">Add Money</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </section>
-
-
-
-
-
-        <section id="balance">
-            <div>
-                <!-- <img src="./images/Taka.svg" alt=""> -->
-            </div>
         </section>
+
     </main>
+    <script src="js/home.js"></script>
 </body>
+
 </html>
