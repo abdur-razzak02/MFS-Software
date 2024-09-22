@@ -29,8 +29,8 @@
                             <div class="flex items-center gap-3">
                                 <img src="./images/Taka.svg" class="w-8 h-7" alt="taka icon">
                                 <div class="stat p-0">
-<div id="balance" class="stat-value"> 9400</div>
-<div class="stat-desc"> Available Balance</div>
+                                    <div id="balance" class="stat-value"> 9400</div>
+                                    <div class="stat-desc"> Available Balance</div>
                                 </div>
                             </div>
                             <!-- logOut button -->
@@ -56,24 +56,47 @@
                         </div>
 
                         <!-- Add Money form -->
-<div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-xl">
-<form class="card-body">
-<div class="form-control">
-<label class="label">
-<span class="label-text">Ammount</span>
-</label>
-<input id="ammountInput" type="text" placeholder="Enter Your Ammount"
-class="input input-bordered" required autocomplete="off" />
-</div>
-<div class="form-control">
-<label class="label">
-<span class="label-text">Pin</span>
-</label>
-<input id="pinInput" type="password" placeholder="Pin Number"
-class="input input-bordered" required autocomplete="on" />
-</div>
-<div class="form-control mt-6">
-<button id="addMoneyBtn" class="btn btn-primary">Add Money</button>
+                        <div id="addMoneyForm" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-xl">
+                            <form class="card-body">
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">Ammount</span>
+                                    </label>
+                                    <input id="ammountInput" type="text" placeholder="Enter Your Ammount"
+                                        class="input input-bordered" required autocomplete="off" />
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">Pin</span>
+                                    </label>
+                                    <input id="pinInput" type="password" placeholder="Pin Number"
+                                        class="input input-bordered" required autocomplete="on" />
+                                </div>
+                                <div class="form-control mt-6">
+                                    <button id="addMoneyBtn" class="btn btn-success">Add Money</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Cash Out form -->
+                        <div id="cashOutForm" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-xl">
+                            <form class="card-body">
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">Ammount</span>
+                                    </label>
+                                    <input id="cashOutAmmount" type="text" placeholder="Enter Your Ammount"
+                                        class="input input-bordered" required autocomplete="off" />
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">Pin</span>
+                                    </label>
+                                    <input id="cashOutPin" type="password" placeholder="Pin Number"
+                                        class="input input-bordered" required autocomplete="on" />
+                                </div>
+                                <div class="form-control mt-6">
+                                    <button id="cashOutBtn" class="btn btn-primary">Cash Out</button>
                                 </div>
                             </form>
                         </div>
@@ -82,7 +105,9 @@ class="input input-bordered" required autocomplete="on" />
         </section>
 
     </main>
-    <script src="js/home.js"></script>
+    <script src="js/addMoney.js"></script>
+    <script src="js/cashOut.js"></script>
+    <script src="js/function.js"></script>
 </body>
 
 </html>
